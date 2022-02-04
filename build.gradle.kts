@@ -1,11 +1,13 @@
+fun properties(key: String) = project.findProperty(key).toString()
+
 plugins {
     id("org.jetbrains.intellij") version "1.3.1"
     kotlin("jvm") version "1.6.10"
     java
 }
 
-group = "com.nekofar.milad"
-version = "1.0.0-alpha.0"
+group = properties("pluginGroup")
+version = properties("pluginVersion")
 
 repositories {
     mavenCentral()
@@ -19,7 +21,7 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version.set("2021.3.2")
+    version.set(properties("platformVersion"))
 }
 tasks {
     patchPluginXml {
