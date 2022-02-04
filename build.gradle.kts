@@ -30,8 +30,7 @@ intellij {
 tasks {
     patchPluginXml {
         changeNotes.set("""
-            Add change notes here.<br>
-            <em>most HTML tags may be used</em>        """.trimIndent())
+            Initial release of the plugin.        """.trimIndent())
     }
 }
 tasks.getByName<Test>("test") {
