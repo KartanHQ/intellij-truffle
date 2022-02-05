@@ -1,22 +1,23 @@
-<idea-plugin>
-    <id>com.nekofar.milad.intellij-truffle</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+<idea-plugin url="https://github.com/nekofar/intellij-truffle">
+    <id>com.nekofar.milad.intellij.truffle</id>
+    <name>Truffle</name>
+    <vendor email="milad@nekofar.com" url="https://github.com/nekofar">Milad Nekofar</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    Provides boilerplate codes for easier smart contract creation using <a href="https://trufflesuite.com/truffle">Truffle</a> CLI. <br>
+    Speed up the setup phase of contract development for both new and experienced developers.
     ]]></description>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>JavaScript</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <!-- works in WebStorm and other SmallIDEs -->
+        <directoryProjectGenerator implementation="com.nekofar.milad.intellij.truffle.cli.TruffleCliProjectGenerator" />
+        <projectTemplatesFactory implementation="com.nekofar.milad.intellij.truffle.cli.TruffleProjectTemplateFactory"/>
+        <!-- works in new IDEA wizard -->
+        <moduleBuilder builderClass="com.nekofar.milad.intellij.truffle.cli.TruffleCliProjectModuleBuilder" />
     </extensions>
-
-    <actions>
-        <!-- Add your actions here -->
-    </actions>
 </idea-plugin>
