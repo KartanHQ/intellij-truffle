@@ -1,7 +1,7 @@
 # IntelliJ Truffle Plugin
 
-[![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/00000-truffle)](https://plugins.jetbrains.com/plugin/00000-truffle)
-[![JetBrains plugins](https://img.shields.io/jetbrains/plugin/d/00000-truffle)](https://plugins.jetbrains.com/plugin/00000-truffle)
+[![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/18559-truffle)](https://plugins.jetbrains.com/plugin/18559-truffle)
+[![JetBrains plugins](https://img.shields.io/jetbrains/plugin/d/18559-truffle)](https://plugins.jetbrains.com/plugin/18559-truffle)
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/nekofar/intellij-truffle/master)
 ![GitHub](https://img.shields.io/github/license/nekofar/intellij-truffle)
 [![Twitter Follow](https://img.shields.io/twitter/follow/nekofar?style=flat)](https://twitter.com/nekofar)
