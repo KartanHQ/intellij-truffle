@@ -14,10 +14,10 @@
     <depends>JavaScript</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <!-- works in WebStorm and other SmallIDEs -->
+        <directoryProjectGenerator implementation="com.nekofar.milad.intellij.truffle.cli.TruffleCliProjectGenerator" />
+        <projectTemplatesFactory implementation="com.nekofar.milad.intellij.truffle.cli.TruffleProjectTemplateFactory"/>
+        <!-- works in new IDEA wizard -->
+        <moduleBuilder builderClass="com.nekofar.milad.intellij.truffle.cli.TruffleCliProjectModuleBuilder" />
     </extensions>
-
-    <actions>
-        <!-- Add your actions here -->
-    </actions>
 </idea-plugin>
