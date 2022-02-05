@@ -29,6 +29,10 @@ intellij {
     plugins.set(properties("platformPlugins").split(',').map(String::trim).filter(String::isNotEmpty))
 }
 tasks {
+    wrapper {
+        gradleVersion = properties("gradleVersion")
+    }
+
     patchPluginXml {
         changeNotes.set("""
             Initial release of the plugin.        """.trimIndent())
