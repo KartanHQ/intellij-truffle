@@ -14,6 +14,8 @@
     <depends>JavaScript</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+        <fileType name="Truffle" language="JavaScript" fileNames="truffle-config.js"
+                  implementationClass="com.nekofar.milad.intellij.truffle.TruffleFileType"/>
         <!-- works in WebStorm and other SmallIDEs -->
         <directoryProjectGenerator implementation="com.nekofar.milad.intellij.truffle.cli.TruffleCliProjectGenerator" />
         <projectTemplatesFactory implementation="com.nekofar.milad.intellij.truffle.cli.TruffleProjectTemplateFactory"/>
