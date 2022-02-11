@@ -5,5 +5,8 @@ import javax.swing.Icon
 
 object TruffleIcons {
     @JvmField
+    val FileType = IconLoader.getIcon("/icons/truffle.svg", javaClass)
+
+    @JvmField
     val ProjectGenerator: Icon = IconLoader.getIcon("/icons/truffle.png", javaClass)
 }
