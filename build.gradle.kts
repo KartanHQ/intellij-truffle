@@ -42,7 +42,6 @@ intellij {
 // Configure Gradle Changelog Plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
 changelog {
     version.set(properties("pluginVersion"))
-    unreleasedTerm.set("[unreleased]")
     groups.set(emptyList())
 }
 
