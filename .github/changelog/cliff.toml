@@ -5,14 +5,13 @@
 header = """
 # Changelog
 All notable changes to this project will be documented in this file.\n
+## [Unreleased]
 """
 # template for the changelog body
 # https://tera.netlify.app/docs/#introduction
 body = """
 {% if version %}\
     ## [{{ version | replace(from="v", to="") }}] - {{ timestamp | date(format="%Y-%m-%d") }}
-{% else %}\
-    ## [unreleased]
 {% endif %}\
 {% for group, commits in commits | group_by(attribute="group") %}
     ### {{ group | upper_first }}
@@ -53,9 +52,9 @@ filter_commits = true
 # glob pattern for matching git tags
 tag_pattern = "v[0-9]*"
 # regex for skipping tags
-skip_tags = "v0.1.0-beta.1"
+skip_tags = "v1.0.[x]"
 # regex for ignoring tags
-ignore_tags = "(alpha|beta|erp)"
+ignore_tags = "-(alpha|beta|erp)"
 # sort the tags topologically
 topo_order = false
 # sort the commits inside sections by oldest/newest order
