@@ -7,6 +7,7 @@ import com.intellij.remoterobot.stepsProcessing.step
 import com.intellij.remoterobot.utils.Locators
 import com.intellij.terminal.JBTerminalPanel
 
+@Suppress("unused", "JSUnresolvedFunction")
 class TerminalFixture(
     remoteRobot: RemoteRobot,
     remoteComponent: RemoteComponent
@@ -23,5 +24,10 @@ class TerminalFixture(
     val screenLines: String
         get() = step("Get screen lines") {
             callJs("""component.getTerminalTextBuffer().getScreenLines() || """"", true)
+        }
+
+    val screenLinesCount: Int
+        get() = step("Get screen lines count") {
+            callJs("""component.getTerminalTextBuffer().getScreenLinesCount() || 0""", true)
         }
 }
