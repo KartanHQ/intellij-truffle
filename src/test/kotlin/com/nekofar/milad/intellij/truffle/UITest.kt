@@ -5,7 +5,7 @@ import com.intellij.remoterobot.RemoteRobot
 import com.intellij.remoterobot.search.locators.byXpath
 import com.intellij.remoterobot.stepsProcessing.step
 import com.intellij.remoterobot.utils.waitFor
-import com.nekofar.milad.intellij.truffle.fixtures.TerminalFixture
+import com.nekofar.milad.intellij.truffle.fixtures.terminal
 import com.nekofar.milad.intellij.truffle.pages.dialog
 import com.nekofar.milad.intellij.truffle.pages.idea
 import com.nekofar.milad.intellij.truffle.pages.welcomeFrame
@@ -52,6 +52,9 @@ class UITest {
         }
         idea {
             waitForFinishBackgroundTasks()
+            step("Find terminal") {
+                terminal().click()
+            }
             step("Find config file") {
                 with(projectViewTree) {
                     if (hasText("truffle-config.js").not()) {
