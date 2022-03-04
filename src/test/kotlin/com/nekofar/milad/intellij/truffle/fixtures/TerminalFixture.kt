@@ -3,11 +3,15 @@ package com.nekofar.milad.intellij.truffle.fixtures
 import com.intellij.remoterobot.RemoteRobot
 import com.intellij.remoterobot.data.RemoteComponent
 import com.intellij.remoterobot.fixtures.ComponentFixture
+import com.intellij.remoterobot.fixtures.DefaultXpath
+import com.intellij.remoterobot.fixtures.FixtureName
 import com.intellij.remoterobot.stepsProcessing.step
 import com.intellij.remoterobot.utils.Locators
 import com.intellij.terminal.JBTerminalPanel
 
-@Suppress("unused", "JSUnresolvedFunction")
+@Suppress("JSUnresolvedFunction", "unused")
+@DefaultXpath(by = "JBTerminalPanel type", xpath = "//div[@class='JBTerminalPanel']")
+@FixtureName("Terminal")
 class TerminalFixture(
     remoteRobot: RemoteRobot,
     remoteComponent: RemoteComponent
