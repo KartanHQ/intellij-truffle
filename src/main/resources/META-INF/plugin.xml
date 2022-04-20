@@ -16,5 +16,7 @@
         <projectTemplatesFactory implementation="com.nekofar.milad.intellij.truffle.cli.TruffleProjectTemplateFactory"/>
         <!-- works in new IDEA wizard -->
         <moduleBuilder builderClass="com.nekofar.milad.intellij.truffle.cli.TruffleCliProjectModuleBuilder" />
+
+        <errorHandler implementation="com.nekofar.milad.intellij.truffle.diagnostic.TruffleErrorReportSubmitter"/>
     </extensions>
 </idea-plugin>
