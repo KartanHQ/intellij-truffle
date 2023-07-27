@@ -6,12 +6,10 @@ import com.intellij.lang.javascript.boilerplate.NpxPackageDescriptor
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.roots.ContentEntry
 import com.intellij.openapi.vfs.VirtualFile
-import com.nekofar.milad.intellij.truffle.TruffleBundle
 import com.nekofar.milad.intellij.truffle.TruffleBundle.message
 import com.nekofar.milad.intellij.truffle.TruffleIcons
-import javax.swing.Icon
 
-class TruffleCliProjectGenerator: NpmPackageProjectGenerator() {
+class TruffleCliProjectGenerator : NpmPackageProjectGenerator() {
     private val packageName = "truffle"
     private val executable = "truffle"
     private val initCommand = "init"
@@ -22,7 +20,7 @@ class TruffleCliProjectGenerator: NpmPackageProjectGenerator() {
 
     override fun filters(project: Project, baseDir: VirtualFile) = emptyArray<Filter>()
 
-    override fun customizeModule(p0: VirtualFile, p1: ContentEntry?) {}
+    override fun customizeModule(virtualFile: VirtualFile, contentEntry: ContentEntry?) {}
 
     override fun packageName() = packageName
 
