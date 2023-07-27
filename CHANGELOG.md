@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+## [1.1.21] - 2023-07-27
+
+### Bug Fixes
+
+- Solve some minor issues and update dependencies
+
+### Security
+
+- Upgrade Gradle version and improve error handling in build script
+
 ## [1.1.20] - 2023-07-22
 
 ### Bug Fixes
